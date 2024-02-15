@@ -232,13 +232,14 @@ remarks nvarchar(max),
 isApproved bit not null default(0)
 );
 
-create trigger tgr_course_register on Course 
+create or alter trigger tgr_course_register on Course 
 instead of insert
 as
 begin
-	insert into newcourse(courseId, courseName, creditHour, remarks)
+	insert into NewCourse(courseId, courseName, creditHour, remarks)
 	select * from inserted;
 end;
-insert into course values(9, 'graphics Design', 2, 'Using insted of trigger')
+insert into newcourse values(9, 'graphics Design', 2, 'Using insted of trigger')
 
-select * from NewCourse;
+select * from NewCourse;	
+
