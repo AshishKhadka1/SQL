@@ -1,4 +1,4 @@
-/*
+
 --select name from sys.databases;
 --create database test;
 --use test;
@@ -58,21 +58,19 @@ select count (distinct testedBy) as Tester_count from Test2;
 
 -- to get data of highest id record 
 select top 50 percent * from test2;
-*/
 
-/*
+
+
 use BCA4;
 select name from sys.tables;
 select * from students;
 update students set stdroll = 102 where std_id = 1 or std_id = 4;
-*/
 
-/* 
+
 	wildcard character: % and _
 	% means zero or many unknown characters
 	_ means one and only one unknown character
 
-*/
 use faculty;
 select * from sys.tables;
 select * from student;

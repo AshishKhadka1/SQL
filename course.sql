@@ -1,20 +1,20 @@
 --create database course;
-/*
+
 create table course(
 courseId smallint identity(1,1) primary key,
 courseName nvarchar(50) not null unique
 );
-*/
 
-/*select * from course;
+
+select * from course;
 insert into course (courseName) values
 ('Science'),
 ('Arts'),
 ('Engineering'),
 ('Business');
 select * from course order by courseId;
-*/
-/*
+
+
 create table student(
 stdId int identity (101 ,1)primary key,stdName nvarchar(50) not null,
 stdRoll tinyint check(stdRoll > 0 and stdRoll < 100) not null,
@@ -24,7 +24,7 @@ facId smallint foreign key references
 course(courseId)not null ),
 primary key(stdid),
 unique(stdRoll,facid);
-*/
+
 
 --select * from student;
 
